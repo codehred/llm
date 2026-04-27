@@ -19,7 +19,7 @@ class TutorIA:
             from openai import OpenAI
             self.modo = "OPENAI"
             self.client = OpenAI(api_key=self.openai_key)
-            print("💡 Usando motor de OpenAI")
+            print("Usando motor de OpenAI")
         elif self.gemini_key:
             self.modo = "GEMINI"
             self.client = genai.Client(api_key=self.gemini_key)
@@ -27,9 +27,9 @@ class TutorIA:
                 model="gemini-2.5-flash", 
                 config=types.GenerateContentConfig(system_instruction=self.sys_instruct)
             )
-            print("💡 Usando motor de Google Gemini")
+            print("Usando motor de Google Gemini")
         else:
-            print("❌ Error: No se encontró ninguna API KEY en .env")
+            print("Error: No se encontró ninguna API KEY en .env")
             exit()
 
     def responder(self, mensaje):
@@ -50,7 +50,7 @@ class TutorIA:
 def iniciar_tutor():
     tutor = TutorIA()
     
-    print("\n--- 🎓 Tutor Virtual Activo ---")
+    print("\n--- Tutor Virtual Activo ---")
     print("(Escribe 'salir' para finalizar)")
     
     while True:
@@ -65,7 +65,7 @@ def iniciar_tutor():
             print(f"\nTutor: {respuesta}")
             
         except Exception as e:
-            print(f"\n❌ Error al procesar: {e}")
+            print(f"\nError al procesar: {e}")
 
 if __name__ == "__main__":
     iniciar_tutor()
