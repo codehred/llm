@@ -24,7 +24,7 @@ Este proyecto implementa un asistente educativo avanzado utilizando modelos de l
 Crea un archivo .env basado en .env.example y añade tu GEMINI_API_KEY.
 
 ## Uso
-    Ejecuta el programa con:
+Ejecuta el programa con:
     ```bash
     python app.py
 
